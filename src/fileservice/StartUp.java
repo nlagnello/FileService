@@ -9,14 +9,8 @@ package fileservice;
  *
  * @author nagnello
  */
-public class FileService {
-
-    private FileReaderStrategy readerStrategy;
-    private FileWriterStrategy writerStrategy;
-    private FileFormatStrategy formatStrategy;
-    
-    
-    
-    
-    
+public class StartUp {
+    public static void main(String[] args) {
+        
+    }
 }

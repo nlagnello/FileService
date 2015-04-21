@@ -9,14 +9,6 @@ package fileservice;
  *
  * @author nagnello
  */
-public class FileService {
-
-    private FileReaderStrategy readerStrategy;
-    private FileWriterStrategy writerStrategy;
-    private FileFormatStrategy formatStrategy;
-    
-    
-    
-    
+public interface FileWriterStrategy {
     
 }

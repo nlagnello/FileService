@@ -5,18 +5,16 @@
  */
 package fileservice;
 
+import java.util.LinkedHashMap;
+import java.util.List;
+
 /**
  *
  * @author nagnello
  */
-public class FileService {
-
-    private FileReaderStrategy readerStrategy;
-    private FileWriterStrategy writerStrategy;
-    private FileFormatStrategy formatStrategy;
+public interface FileFormatStrategy {
     
     
-    
-    
-    
+    List<LinkedHashMap<String,String>> decodeAll(String data);
+    String encodeAll(List<LinkedHashMap<String,String>> fileContent, boolean useHeader);
 }
