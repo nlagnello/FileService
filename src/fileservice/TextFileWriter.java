@@ -5,7 +5,11 @@
  */
 package fileservice;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -20,7 +24,17 @@ public class TextFileWriter implements FileWriterStrategy{
     
     @Override
     public void writeRecords(List<LinkedHashMap<String, String>> data, boolean useHeader) throws IOException {
-
+        
+        File file = new File(filePath);
+        
+        PrintWriter write = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+        
+        String stringData = fileFormat.encodeAll(data, useHeader);
+        
+        write.print(stringData);
+        write.close();
+        
+        
     }
 
     @Override
